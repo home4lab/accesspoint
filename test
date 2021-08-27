@@ -1,0 +1,16 @@
+http://172.16.31.100/UPG_BUNDLE_8.3.0-424_2_6_100_100_2_VLAN100/
+
+
+cd /tmp
+
+dd if=/dev/mtdblock7 of=/tmp/WP8331bt_art_MP_01.bin
+
+wget http://172.16.56.145/c-100-vlan-100-flash-0412.bin
+
+md5sum c-100-vlan-100-flash-0412.bin
+
+dd if=WP8331bt_art_MP_01.bin of=c-100-vlan-100-flash-0412.bin bs=1k seek=1472 count=64 conv=notrunc
+
+dd if=c-100-vlan-100-flash-0412.bin of=/dev/mtdblock14 bs=1M
+
+reboot
