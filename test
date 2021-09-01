@@ -29,6 +29,10 @@ reboot
 
 # change mac address to 2g and 5g
 
+ssh root@<your_ip_accesspoint>
+
+rootroot
+
 wtpcli
 
 timeout 0
