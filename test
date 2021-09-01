@@ -1,11 +1,23 @@
-http://172.16.31.100/UPG_BUNDLE_8.3.0-424_2_6_100_100_2_VLAN100/
+# upgrade via ssh 2x
+
+# change access_point_ip with your access point ip
+ssh config@access_point_ip
+
+upgrade
+
+# change your_ip to ip server file
+http://your_ip/UPG_BUNDLE_8.3.0-424_2_6_100_100_2_VLAN100/
 
 
+
+
+# upgrade via telnet 1x
 cd /tmp
 
 dd if=/dev/mtdblock7 of=/tmp/WP8331bt_art_MP_01.bin
 
-wget http://172.16.56.145/c-100-vlan-100-flash-0412.bin
+# change your_ip to ip server file
+wget http://your_ip/c-100-vlan-100-flash-0412.bin
 
 md5sum c-100-vlan-100-flash-0412.bin
 
