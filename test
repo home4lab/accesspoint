@@ -26,3 +26,23 @@ dd if=WP8331bt_art_MP_01.bin of=c-100-vlan-100-flash-0412.bin bs=1k seek=1472 co
 dd if=c-100-vlan-100-flash-0412.bin of=/dev/mtdblock14 bs=1M
 
 reboot
+
+# change mac address to 2g and 5g
+
+wtpcli
+
+timeout 0
+
+set mid 163BTR60000000000000
+
+vni product
+
+tech@rootroot
+
+set athmac 2g <your_new_mac_address>
+
+set athmac 5g <your_new_mac_address>
+
+exit
+
+reboot
